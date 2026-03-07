@@ -10,12 +10,22 @@
 
 <h1> Stuff </h1>
 <p> Blah blah blha idk what im doing lol </p>
-Name: <input id="name"><br><br>
+
+/* Name: <input id="name"><br><br>
 Email: <input id="email"><br><br>
 SSN: <input type="number" id="ssn"><br><br>
 Age (Months): <input type="number" id="age"><br><br>
 Height (Milimeters): <input type="number" id="height"><br><br>
-Weight (Micrograms): <input type="number" id="weight"><br><br>
+Weight (Micrograms): <input type="number" id="weight"><br><br> */
+
+<form id="dataForm">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="status"></p>
+
 Race: 
 <input type="checkbox" name="Race" value="Asian">
 <input type="checkbox" name="Race" value="White">
@@ -23,10 +33,10 @@ Race:
 <input type="checkbox" name="Race" value="Middle East">
 
 
-<button onclick="saveCSV()">Save</button>
+<button onclick="saveCSV()"> Save </button>
 
 <script>
-function saveCSV() {
+/* function saveCSV() {
 
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
@@ -44,16 +54,31 @@ function saveCSV() {
   a.href = URL.createObjectURL(blob);
   a.download = "data.csv";
   a.click();
-}
+} */
+
+
+    const form = document.getElementById('dataForm');
+    const status = document.getElementById('status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      const response = await fetch('/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const text = await response.text();
+      status.textContent = text;
+      form.reset();
+    });
+
 </script>
 
 
-<button> this is button </button>
-<select> This is a drop down 
-<option value = "first"> First </option>
-<option value = "second"> Second </option>
-<option value = "third"> Third </option>
 
-</select>
 </body>
 </html>
