@@ -3,6 +3,7 @@
 <html>
 <title> Random Ass website </title>
 <head> 
+
 </head>
 
 <body>
@@ -11,6 +12,16 @@
 <p> Blah blah blha idk what im doing lol </p>
 Name: <input id="name"><br><br>
 Email: <input id="email"><br><br>
+SSN: <input type="number" id="ssn"><br><br>
+Age (Months): <input type="number" id="age"><br><br>
+Height (Milimeters): <input type="number" id="height"><br><br>
+Weight (Micrograms): <input type="number" id="weight"><br><br>
+Race: 
+<input type="checkbox" name="Race" value="Asian">
+<input type="checkbox" name="Race" value="White">
+<input type="checkbox" name="Race" value="Black">
+<input type="checkbox" name="Race" value="Middle East">
+
 
 <button onclick="saveCSV()">Save</button>
 
@@ -19,8 +30,13 @@ function saveCSV() {
 
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
+  let SSN = document.getElementById("ssn").value;
+  let Age = document.getElementById("age").value;
+  let Height = document.getElementById("height").value;
+  let Weight = document.getElementById("weight").value;
 
-  let csv = "Name,Email\n" + name + "," + email;
+
+  let csv = "Name,Email,SSN,Age,Height,Weight\n" + name + "," + email + "," + SSN + "," + Age + "," + Height + "," + Weight;
 
   let blob = new Blob([csv], { type: "text/csv" });
 
