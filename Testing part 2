@@ -2,14 +2,17 @@
 <html>
 <title> Random Ass website </title>
 <head> 
-
+<script>
+  alert("Hello, World!");
+</script>
 </head>
 
 <body>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph. </p>
+<h1> This is your mental Health Identifier </h1>
+<p> Blah blah blha idk what im doing lol </p>
 
-
+<button> this is button </button>
+<select> This is a drop down </select>
 </body>
 </html>
