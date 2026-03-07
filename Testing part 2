@@ -33,10 +33,10 @@ Race:
 <input type="checkbox" name="Race" value="Middle East">
 
 
-<button onclick="saveCSV()"> Save </button>
+<button onclick="saveCSV()"> Click me to download your data! </button>
 
 <script>
-/* function saveCSV() {
+function saveCSV() {
 
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
@@ -54,7 +54,7 @@ Race:
   a.href = URL.createObjectURL(blob);
   a.download = "data.csv";
   a.click();
-} */
+} 
 
 
     const form = document.getElementById('dataForm');
