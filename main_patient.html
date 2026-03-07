@@ -1,0 +1,42 @@
+<html> 
+
+<head>  
+    <title> Main Page </title>
+</head>
+<body>  
+    <div class="right-panel">
+  <button>Action 1</button>
+  <button>Action 2</button>
+  <button>Action 3</button>
+  <button>Action 4</button>
+</div>
+
+<style>
+.right-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;         /* Adjust width as needed */
+  height: 100vh;        /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+}
+
+.right-panel button {
+  flex: 1;              /* Makes each button take up equal vertical space */
+  border: 1px solid #444;
+  background: #555;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.right-panel button:hover {
+  background: #777;     /* Simple hover effect */
+}
+</style>
+
+</body>
+
+</html>
