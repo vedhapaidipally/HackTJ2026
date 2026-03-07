@@ -1,18 +1,43 @@
+
 <!DOCTYPE html>
 <html>
 <title> Random Ass website </title>
 <head> 
-<script>
-  alert("Hello, World!");
-</script>
 </head>
 
 <body>
 
-<h1> This is your mental Health Identifier </h1>
+<h1> Stuff </h1>
 <p> Blah blah blha idk what im doing lol </p>
+Name: <input id="name"><br><br>
+Email: <input id="email"><br><br>
+
+<button onclick="saveCSV()">Save</button>
+
+<script>
+function saveCSV() {
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+
+  let csv = "Name,Email\n" + name + "," + email;
+
+  let blob = new Blob([csv], { type: "text/csv" });
+
+  let a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "data.csv";
+  a.click();
+}
+</script>
+
 
 <button> this is button </button>
-<select> This is a drop down </select>
+<select> This is a drop down 
+<option value = "first"> First </option>
+<option value = "second"> Second </option>
+<option value = "third"> Third </option>
+
+</select>
 </body>
 </html>
