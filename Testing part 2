@@ -11,14 +11,20 @@
 <h1> Stuff </h1>
 <p> Blah blah blha idk what im doing lol </p>
 
-SSN: <input type="number" id="ssn"><br><br>
-Height (Milimeters): <input type="number" id="height"><br><br>
-Weight (Micrograms): <input type="number" id="weight"><br><br> */
 
 <form id="dataForm">
  <input type="text" id="name" name="name" placeholder="Name" required>
  <input type="email" id= "email" name="email" placeholder="Email" required>
- <input type="number" name="age" placeholder="Age" required>
+ <input type="number" name="age" placeholder="Age (Months)" required>
+ <input type="number" name="height" placeholder="Height (mm)" required>
+ <input type="number" name="weight" placeholder="Weight (mg)" required>
+ <input type="number" name="ssn" placeholder="SSN" required>
+ <input type="text" name="sex" placeholder="Male/Female/Intersex" required>
+ <input type="text" name="gender" placeholder="Preferred Gender Identity" required>
+ <input type="text" name="ethnicity" placeholder="Ethnicity" required>
+
+
+
 	
 <button type="submit">Submit</button>
   </form>
