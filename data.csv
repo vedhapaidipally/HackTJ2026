@@ -1,21 +1,26 @@
-Name,Email,SSN,Age,Height,Weight
-uva,aditibhat55@gmail.com,,,,
-Alice,yry@gmail.com,,,,
-uva,undefined,,,,
-donald bob,undefined,,,,
-
-undefined,undefined
-undefined,undefined
-undefined,undefined
-undefined,undefined
-undefined,undefined
-undefined,undefined
-undefined,undefined
-undefined,undefined
-undefined,undefined
-william & mary,undefined
-william & mary,undefined
-william & mary,undefined
-Alice,yry@gmail.com
-test,undefined
-tewst,undefined
+Name,Email,Age,Height,Weight,SSN,Sex,Gender,Ethnicity
+uva,aditibhat55@gmail.com,,,,,,,
+Alice,yry@gmail.com,,,,,,,
+uva,undefined,,,,,,,
+Alice,yry@gmail.com,,,,,,,
+test,undefined,,,,,,,
+tewst,undefined,,,,,,,
+ijweiw,undefined,,,,,,,
+pwopq,undefined,,,,,,,
+test,undefined,,,,,,,
+test,undefined,,,,,,,
+,,,,,,,,
+ok,undefined,,,,,,,
+name,1,,,,,,,
+lkl,1,,,,,,,
+test,1021,,,,,,,
+test,1021,,,,,,,
+Alice,yry@gmail.com,,,,,,,
+Name,email@email.com,,,,,,,
+Aditi,veda@gmail.com,,,,,,,
+,,,,,,,,
+Aditi,aditibhat55@gmail.com,213,,,,,,
+Alice,yry@gmail.com,39,1234,Male,he/him,Huh,,
+Aditi,aditibhat55@gmail.com,213,1213455,Female,She/They,Indian,,
+Alice,yry@gmail.com,39,310,93,1234,Male,he/him,Huh
+Aditi,aditibhat55@gmail.com,1212,2323,3434,5656,Female,She/They,Indian
