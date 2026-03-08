@@ -8,8 +8,8 @@
 
 <body>
 
-<h1> Stuff </h1>
-<p> Blah blah blha idk what im doing lol </p>
+<h1> Information </h1>
+<p> Please input your information here! </p>
 
 
 <form id="dataForm">
