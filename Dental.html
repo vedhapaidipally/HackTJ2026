@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<title> Dentist Input </title>
+<head> 
+
+</head>
+
+<body>
+
+<h1> Patient Information </h1>
+<p> Please add Patient Information here c: </p>
+
+
+<form id="dataForm">
+ <input type="text" name="name" placeholder="Name" >
+ <input type="text" name="email" placeholder="Email" > 
+<input type="number" id="cavity" name="cavity" placeholder="Number of Cavities" required>
+ <input type="number" id= "gum" name="gum" placeholder="Gum Health (1-10)" required>
+ <input type="number" name="plaque" placeholder="Plaque Level (1-10)" required>
+ <input type="text" name="braces" placeholder="Braces/History of Braces (Y/N)" required>
+ <input type="text" name="note" placeholder="General Notes" >
+
+
+
+
+	
+<button type="submit">Submit</button>
+  </form>
+
+  <p id="status"></p>
+
+
+
+<button onclick="saveCSV()"> Click me to download your data! </button>
+<form action = "file:///C:/Users/aditi/Downloads/main_patient.html" method="GET">
+<button type= “submit”> Next </button> 
+
+<script>
+
+function saveCSV() {
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let SSN = document.getElementById("ssn").value;
+  let Age = document.getElementById("age").value;
+  let Height = document.getElementById("height").value;
+  let Weight = document.getElementById("weight").value;
+
+
+  let csv = "Name,Email,SSN,Age,Height,Weight\n" + name + "," + email + "," + SSN + "," + Age + "," + Height + "," + Weight;
+
+  let blob = new Blob([csv], { type: "text/csv" });
+
+  let a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "data.csv";
+  a.click();
+} 
+
+
+    const form = document.getElementById('dataForm');
+    const status = document.getElementById('status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      const response = await fetch('/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const text = await response.text();
+      status.textContent = text;
+      form.reset();
+    });
+
+</script>
+
+
+
+</body>
+</html>
