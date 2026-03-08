@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
         req.on('data', chunk => { body += chunk; });
         req.on('end', () => {
             const data = JSON.parse(body);
-            const newLine = `\n${data.name},${data.age}`;
+            const newLine = `\n${data.name},${data.email},${data.age}`;
 
             fs.appendFile('data.csv', newLine, (err) => {
                 if (err) {
