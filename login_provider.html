@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Provider Login</title>
+</head>
+<body>
+
+<h1 style="text-align: center;">Common Health - Provider Portal</h1>
+
+<form>
+  <label>Company: <input type="text" name="company" required></label><br>
+  <label>Username: <input type="text" name="username" required></label><br>
+  <label>National Provider Identifier: <input type="text" name="npi" required></label><br>
+  <label>Password: <input type="password" name="pass" required></label><br><br>
+
+  <label for="records">Choose the type of records to access:</label><br>
+  <select id="records">
+      <option value="dental_provider_choose_patient.html">Access Dental Records</option>
+      <option value="optometry_provider_choose_patient.html">Access Optometry Records</option>
+      <option value="primary_provider_choose_patient.html">Access Primary Care Records</option>
+  </select><br><br>
+
+  <!-- Button triggers navigation -->
+  <button type="button" onclick="goToRecord()">Go</button>
+</form>
+
+<script>
+function goToRecord() {
+    // Get the dropdown element
+    let dropdown = document.getElementById("records");
+
+    // Get the selected page
+    let page = dropdown.value;
+
+    // Navigate to that page
+    window.location.href = page;
+}
+</script>
+
+</body>
+</html>
