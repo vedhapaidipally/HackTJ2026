@@ -9,13 +9,27 @@
     <img src="81075.jpg" alt="Hospital" width="1250" height="800">
 
     <div class="left-panel">
-  <button>My Information</button>
-  <button>My Doctors</button>
+      <form action="myinfo.html" method="GET">
+  <button type="submit">My Information</button>
+      </form>
+      <form action="mydoctors.html" method="GET">
+  <button type="submit">My Doctors</button> </form>
   <button>Manage Appointments</button>
   <button>Settings</button>
 </div>
 
 <style>
+
+  .left-panel form {
+  flex: 1;      /* Makes the form grow like the other buttons */
+  display: flex; /* Allows the button inside to stretch */
+}
+
+.left-panel form button {
+  width: 100%;  /* Makes the button fill the width of the form */
+  height: 100%; /* Makes the button fill the height of the form */
+}
+
 .left-panel {
   position: fixed;
   right: 0;
